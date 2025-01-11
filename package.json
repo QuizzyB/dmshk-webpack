@@ -3,10 +3,13 @@
     "version": "1.0.0",
     "description": "webpack",
     "main": "index.js",
+    "homepage": "https://github.com/QuizzyB/dmshk-webpack",
     "scripts": {
         "start": "npx webpack serve --config webpack.config.dev.js",
         "build": "npx webpack --config webpack.config.prod.js",
-        "build:dev": "npx webpack --config webpack.config.dev.js"
+        "build:dev": "npx webpack --config webpack.config.dev.js",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "keywords": [
         "webpack"
